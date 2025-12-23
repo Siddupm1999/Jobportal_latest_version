@@ -2279,7 +2279,7 @@ const JobSeekerDashboard = () => {
                       sx={{
                         position: 'absolute',
                         bottom: 0,
-                        left: 56,
+                        left: 50,
                         bgcolor: 'background.paper',
                         boxShadow: 2,
                         width: 32,
