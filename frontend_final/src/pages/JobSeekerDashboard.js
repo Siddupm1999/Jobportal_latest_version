@@ -1,3 +1,4 @@
+import { Link as RouterLink } from 'react-router-dom';
 import React, { useState, useEffect, useCallback } from 'react';
 import {
   Container,
@@ -2086,7 +2087,8 @@ const JobSeekerDashboard = () => {
                     textTransform: 'none',
                     fontWeight: 'bold',
                   }}
-                  href="/jobs"
+                  component={RouterLink}
+                  to="/jobs"
                 >
                   Browse Jobs
                 </Button>
@@ -2185,7 +2187,9 @@ const JobSeekerDashboard = () => {
                 <Typography variant="h6" color="text.secondary">
                   No saved jobs
                 </Typography>
-                <Button variant="contained" href="/jobs">
+                <Button variant="contained" component={RouterLink}
+                  to="/jobs"
+                >
                   Browse Jobs
                 </Button>
               </CardContent>
@@ -2353,7 +2357,7 @@ const JobSeekerDashboard = () => {
                       <Typography variant="body2" noWrap sx={{ maxWidth: 180 }}>
                         {resume.filename}
                       </Typography>
-                      <Link href={resume.url} target="_blank">
+                      <Link Link={resume.url} target="_blank">
                         <IconButton size="small" color="primary">
                           <Download fontSize="small" />
                         </IconButton>
@@ -3095,7 +3099,7 @@ const JobSeekerDashboard = () => {
 
                         {cert.certificationUrl && (
                           <Link
-                            href={cert.certificationUrl}
+                            Link={cert.certificationUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             variant="body2"

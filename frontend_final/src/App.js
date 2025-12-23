@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AuthProvider } from './context/AuthContext';
@@ -38,7 +37,12 @@ function App() {
       <AuthProvider>
         <Router>
           <div className="App">
-            <Navbar />
+            <Navbar  style={{ padding: '10px', textAlign: 'center' }}>
+              <Link to="/" style={{ margin: '0 10px' }}>Home</Link>
+              <Link to="/jobs" style={{ margin: '0 10px' }}>Jobs</Link>
+              <Link to="/blog" style={{ margin: '0 10px' }}>Blog</Link>
+              <Link to="/about" style={{ margin: '0 10px' }}>About</Link>
+            </Navbar>
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />
